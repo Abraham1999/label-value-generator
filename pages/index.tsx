@@ -16,7 +16,7 @@ export default function Home() {
 
   let formattedValues = [];
   for (const value of generatedValue) {
-    formattedValues.push(`{ label: ${value}, value: ${value} },`);
+    formattedValues.push(`{ label: "${value}", value: "${value}" }`);
   }
 
   const copyText =
@@ -96,7 +96,7 @@ export default function Home() {
         <div className='bg-[#222] px-6 py-6 mt-12 '>
           [
           {generatedValue.map((item, index) => (
-            <p key={index}>{`{ label: ${item}, value: ${item} },`}</p>
+            <p key={index}>{`{ label: "${item}", value: "${item}" },`}</p>
           ))}
           ]{' '}
         </div>
